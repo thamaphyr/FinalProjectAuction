@@ -1,0 +1,17 @@
+﻿body {
+    background-color:#00ffff;
+}
+
+
+.navigation {
+    position:absolute;
+    top:0;
+    left:0;
+    height: 50px;
+    width:100%;
+    background-color:#e58f8f;
+}
+
+.nav-respect{
+    margin-top:50px;
+}

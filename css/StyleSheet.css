@@ -26,15 +26,17 @@ h1 {
     font-size: 35px;
     padding: 10px;
     margin: 0px 0px 10px 0px;
+    font-style:italic;
+    text-align:center;
 }
 
 nav{
    width: 831px;
    background-color: aquamarine;
    text-align:center;
-   height: 27px;
+   height: 45px;
    margin-left: 0px;
-   padding:5px;
+   padding:8px;
 
 }
 
@@ -52,10 +54,7 @@ footer
  text-align:center;
  font-size: 12px;
  padding-top:10px;
- 
-
 }
-
 
 
 section#MainContent a
@@ -75,4 +74,3 @@ section#MainContent a:hover
       color: orange;
       text-decoration: underline;
 }
-

@@ -8,7 +8,7 @@
         <asp:Table ID="Table1" runat="server" Height="343px" Width="681px">
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server"></asp:TableCell>
-                <asp:TableCell runat="server" ColumnSpan="2">LOGIN add some changes Azima</asp:TableCell>
+                <asp:TableCell runat="server" ColumnSpan="2">LOGIN</asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server">Username</asp:TableCell>
@@ -29,9 +29,17 @@
                 <asp:TableCell runat="server"></asp:TableCell>
             </asp:TableRow>
         </asp:Table>
-    <section />
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [username], [user_id], [password], [lastname], [name] FROM [user]"></asp:SqlDataSource>
-        <asp:GridView ID="GridView1" runat="server">
+    </section>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [user]"></asp:SqlDataSource>
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <asp:GridView ID="GridView1" runat="server" Visible="False" AutoGenerateColumns="False" DataKeyNames="user_id" DataSourceID="SqlDataSource1">
+            <Columns>
+                <asp:BoundField DataField="user_id" HeaderText="user_id" ReadOnly="True" SortExpression="user_id" />
+                <asp:BoundField DataField="username" HeaderText="username" SortExpression="username" />
+                <asp:BoundField DataField="password" HeaderText="password" SortExpression="password" />
+                <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
+                <asp:BoundField DataField="lastname" HeaderText="lastname" SortExpression="lastname" />
+            </Columns>
         </asp:GridView>
 
 </asp:Content>

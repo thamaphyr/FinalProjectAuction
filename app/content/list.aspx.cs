@@ -55,6 +55,11 @@ public partial class app_content_list : System.Web.UI.Page
             Response.Redirect("~/app/login");
         }
     }
-    
 
+
+
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/app/login/LogOut.aspx");
+    }
 }

@@ -6,7 +6,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cpMainContent" Runat="Server">
     
     <section class="nav-respect">
-
         <br />
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [auction_id], [item], [init_price], [bid_price], [bidusername], [username] FROM [auction]" DeleteCommand="DELETE FROM [auction] WHERE [auction_id] = @auction_id" InsertCommand="INSERT INTO [auction] ([item], [init_price], [bid_price], [bidusername], [username]) VALUES (@item, @init_price, @bid_price, @bidusername, @username)" UpdateCommand="UPDATE [auction] SET [item] = @item, [init_price] = @init_price, [bid_price] = @bid_price, [bidusername] = @bidusername, [username] = @username WHERE [auction_id] = @auction_id">
             <DeleteParameters>
@@ -28,7 +27,6 @@
                 <asp:Parameter Name="auction_id" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
-
     </section>
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="auction_id" DataSourceID="SqlDataSource1" AllowSorting="True" OnRowDataBound="gridChangerequirement" >
         <Columns>

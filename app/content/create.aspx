@@ -29,14 +29,7 @@
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server">Username</asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="Username" runat="server" value="" Enabled="False"></asp:TextBox>
-                </asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow runat="server">
-                <asp:TableCell runat="server">User Bid price</asp:TableCell>
-                <asp:TableCell runat="server">
-                    <asp:TextBox ID="Userbidname" runat="server" value="" Enabled="False"></asp:TextBox>
+                    <asp:TextBox ID="Username" runat="server" Enabled="False"></asp:TextBox>
                 </asp:TableCell>
                 <asp:TableCell runat="server"></asp:TableCell>
             </asp:TableRow>

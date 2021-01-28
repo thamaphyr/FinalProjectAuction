@@ -1,10 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/layouts/MasterPage.master" AutoEventWireup="true" CodeFile="Edit.aspx.cs" Inherits="app_content_Edit" %>
 
-<%@ Register Src="~/app/navigation/nav.ascx" TagPrefix="uc1" TagName="nav" %>
 
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
-    <uc1:nav runat="server" ID="nav" />
+<asp:Content ID="Content1" ContentPlaceHolderID="cpMainContent" Runat="Server">
     <section class="nav-respect">
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">

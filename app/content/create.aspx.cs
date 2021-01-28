@@ -7,14 +7,13 @@ using System.Web.UI.WebControls;
 
 public partial class app_content_create : System.Web.UI.Page
 {
-    private IFormatProvider initp;
 
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["username"] != null)
         {
             Username.Text = Session["username"].ToString();
-            Userbidname.Text = Session["username"].ToString();
+            //Userbidname.Text = Session["username"].ToString();
         }
         else {
            Response.Redirect("~/app/login");
@@ -25,7 +24,7 @@ public partial class app_content_create : System.Web.UI.Page
     {
         int numVal;
         if (Int32.TryParse(InitPrice.Text.ToString(), out numVal)){
-            string query = "insert into auction (item, init_price, bid_price, username, bidusername) values ('" + Item.Text.ToString() + "', '" + InitPrice.Text.ToString() + "', NULL, '" + Username.Text.ToString() + "', '" + Userbidname.Text.ToString() + "')";
+            string query = "insert into auction (item, init_price, bid_price, username, bidusername) values ('" + Item.Text.ToString() + "', '" + InitPrice.Text.ToString() + "', NULL, '" + Username.Text.ToString() + "', NULL)";
             System.Diagnostics.Debug.WriteLine(query);
             SqlDataSource1.InsertCommand = query;
 

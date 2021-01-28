@@ -9,7 +9,15 @@ public partial class app_content_list : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+        //if (!Page.IsPostBack)
+        //{
+            string id2delete = Request["deleteid"];
+            if (!string.IsNullOrEmpty(id2delete)) {
+                SqlDataSource1.DeleteCommand = "DELETE FROM auction WHERE auction_id='" + id2delete.ToString() + "'";
+                SqlDataSource1.Delete();
+                Response.Redirect("~/app/content/list.aspx");
+            }
+        //}
     }
 
     protected void Button1_Click(object sender, EventArgs e)
@@ -17,10 +25,6 @@ public partial class app_content_list : System.Web.UI.Page
         Response.Redirect("~/app/content/create.aspx");
     }
 
-    protected void delete_Click(object sender, EventArgs e)
-    {
-        System.Diagnostics.Debug.WriteLine("DELETING");
-    }
 
     protected void gridChangerequirement(object sender, GridViewRowEventArgs e)
     {
@@ -31,19 +35,17 @@ public partial class app_content_list : System.Web.UI.Page
                 LinkButton le = new LinkButton();
                 le.ID = "lbBooks";
                 le.Text = "Edit";
-                le.PostBackUrl = "~/app/content/Delete.aspx?id=" + e.Row.Cells[0].Text.ToString();
+                le.PostBackUrl = "~/app/content/Edit.aspx?id=" + e.Row.Cells[0].Text.ToString();
                 
                 e.Row.Cells[0].Controls.Add(le);
 
-                Button ldel = new Button();
+                LinkButton ldel = new LinkButton();
                 ldel.ID = "ldel";
                 ldel.Text = "Delete";
-                
-                //ldel.PostBackUrl = "~/app/content/delete.aspx?id=" + e.Row.Cells[0].Text.ToString();
+                ldel.PostBackUrl = "~/app/content/list.aspx?deleteid=" + e.Row.Cells[0].Text.ToString();
 
                 e.Row.Cells[7].Controls.Add(ldel);
-            }
-            else {
+            } else {
                 LinkButton lb = new LinkButton();
                 lb.ID = "lbBid";
                 lb.Text = "BID";

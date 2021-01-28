@@ -28,23 +28,29 @@ public partial class app_content_Edit : System.Web.UI.Page
                 InitPrice.Text = GridView1.Rows[0].Cells[7].Text;
                 BidPrice.Text = (GridView1.Rows[0].Cells[8].Text.ToString() == "&nbsp;") ? "" : GridView1.Rows[0].Cells[8].Text.ToString();
                 BidUsername.Text = GridView1.Rows[0].Cells[10].Text;
+
+                if (!string.IsNullOrEmpty(BidPrice.Text.ToString())) {
+                    InitPrice.ReadOnly = true;
+                }
             }
         }
     }
 
     protected void btnEdit_Click(object sender, EventArgs e)
     {
-        int numVal;
-        if (Int32.TryParse(InitPrice.Text.ToString(), out numVal))
+        Boolean flagUpdate = true;
+        int numInitPrice;
+        if (Int32.TryParse(InitPrice.Text.ToString(), out numInitPrice))
         {
-            string query = "UPDATE auction SET item='" + Item.Text.ToString() + "', init_price='" + InitPrice.Text.ToString() + "' WHERE auction_id='" + Id.Text.ToString() +"'";
-            System.Diagnostics.Debug.WriteLine(query);
-            SqlDataSource1.UpdateCommand = query;
-            SqlDataSource1.Update();
+            if (flagUpdate) { 
+                string query = "UPDATE auction SET item='" + Item.Text.ToString() + "', init_price='" + InitPrice.Text.ToString() + "' WHERE auction_id='" + Id.Text.ToString() + "'";
+                System.Diagnostics.Debug.WriteLine(query);
+                SqlDataSource1.UpdateCommand = query;
+                SqlDataSource1.Update();
 
-            lblMsg.Text = "Register updated";
-        }
-        else {
+                lblMsg.Text = "Register updated";
+            }
+        } else {
             lblMsg.Text = "Error: Init Price has to be a number";
         }
     }

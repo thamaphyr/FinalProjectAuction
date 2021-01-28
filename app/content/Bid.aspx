@@ -22,10 +22,14 @@
                 <asp:TableCell runat="server">Init Price</asp:TableCell>
                 <asp:TableCell runat="server">
                     <asp:Label ID="InitPrice" runat="server" Text=""/>
-                </asp:TableCell><asp:TableCell runat="server"></asp:TableCell></asp:TableRow><asp:TableRow runat="server">
+                </asp:TableCell><asp:TableCell runat="server"></asp:TableCell>
+
+            </asp:TableRow>
+            
+            <asp:TableRow runat="server">
                 <asp:TableCell runat="server">Bid Price</asp:TableCell><asp:TableCell runat="server">
-                    <asp:TextBox ID="BidPrice" runat="server"></asp:TextBox>
-                </asp:TableCell><asp:TableCell runat="server"></asp:TableCell></asp:TableRow><asp:TableRow runat="server">
+                    <asp:TextBox ID="BidPrice" runat="server"></asp:TextBox> 
+                </asp:TableCell><asp:TableCell runat="server"><asp:Label ID="OldBidPrice" runat="server" Text=""/></asp:TableCell></asp:TableRow><asp:TableRow runat="server">
                 <asp:TableCell runat="server">User Name</asp:TableCell><asp:TableCell runat="server">
                     <asp:Label ID="Username" runat="server" Text=""/>
                 </asp:TableCell><asp:TableCell runat="server"></asp:TableCell></asp:TableRow><asp:TableRow runat="server">

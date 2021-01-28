@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[user] (
+    [user_id]  INT           IDENTITY (1, 1) NOT NULL,
+    [username] VARCHAR (100) NULL,
+    [password] VARCHAR (50)  NULL,
+    [name]     VARCHAR (50)  NULL,
+    [lastname] VARCHAR (50)  NULL,
+    [zipcode] NCHAR(10) NULL, 
+    PRIMARY KEY CLUSTERED ([user_id] ASC)
+);
+

@@ -12,20 +12,27 @@
             </asp:TableRow>
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server">Username</asp:TableCell>
-                <asp:TableCell runat="server"><input type="text" value=""/></asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:TextBox ID="username" runat="server"></asp:TextBox></asp:TableCell>
                 <asp:TableCell runat="server"></asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server">Password</asp:TableCell>
-                <asp:TableCell runat="server"><input type="password" value=""/></asp:TableCell>
+                <asp:TableCell runat="server"><asp:TextBox ID="password" runat="server"></asp:TextBox></asp:TableCell>
                 <asp:TableCell runat="server"></asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server"></asp:TableCell>
-                <asp:TableCell runat="server"><button>LOGIN</button></asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:Button ID="Button1" runat="server" Text="LOGIN" OnClick="Button1_Click" />
+                </asp:TableCell>
                 <asp:TableCell runat="server"></asp:TableCell>
             </asp:TableRow>
         </asp:Table>
     <section />
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [username], [user_id], [password], [lastname], [name] FROM [user]"></asp:SqlDataSource>
+        <asp:GridView ID="GridView1" runat="server">
+        </asp:GridView>
+
 </asp:Content>
 

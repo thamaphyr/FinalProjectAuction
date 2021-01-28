@@ -14,15 +14,29 @@ public partial class content_Default : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        string query = "select * from [user] where username='" + username.Text.ToString() + "' AND password='" + password.Text.ToString() + "'";
+
+        string query = "select [user_id], [username], [password], [name] from [user] where username='" + username.Text.ToString() + "' AND password='" + password.Text.ToString() + "'";
+
+       
         System.Diagnostics.Debug.WriteLine(query);
         SqlDataSource1.SelectCommand = query;
+
         GridView1.DataSource = SqlDataSource1;
         GridView1.DataBind();
 
-        Session["user_id"] = "1";
-        Session["username"] = "PeterP";
-        Session["name"] = "Peter";
-        Response.Redirect("~/app/content/list.aspx");
-    }
+        Label1.Text = "";
+        if (GridView1.Rows.Count == 0)
+        {
+            Label1.Text = "Incorrect email/password";
+        } else
+        {
+            Session["user_id"] = GridView1.Rows[0].Cells[0].Text;
+            Session["username"] = GridView1.Rows[0].Cells[1].Text;
+            Session["name"] = GridView1.Rows[0].Cells[3].Text;
+            Response.Redirect("~/app/content/list.aspx");
+        }
+     }
+
+
 }
+

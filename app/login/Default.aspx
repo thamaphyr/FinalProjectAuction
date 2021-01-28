@@ -8,7 +8,7 @@
         <asp:Table ID="Table1" runat="server" Height="343px" Width="681px">
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server"></asp:TableCell>
-                <asp:TableCell runat="server" ColumnSpan="2">LOGIN add some changes Azima</asp:TableCell>
+                <asp:TableCell runat="server" ColumnSpan="2">LOGIN</asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server">Username</asp:TableCell>
@@ -29,8 +29,17 @@
                 <asp:TableCell runat="server"></asp:TableCell>
             </asp:TableRow>
         </asp:Table>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [user]"></asp:SqlDataSource>
-        <asp:GridView ID="GridView1" runat="server">
+
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT user_id, password, username FROM [user]">
+        </asp:SqlDataSource>
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <asp:GridView ID="GridView1" runat="server" Visible="False">
+            <Columns>
+                <asp:BoundField />
+                <asp:BoundField />
+                <asp:BoundField />
+                <asp:BoundField />
+            </Columns>
         </asp:GridView>
     </asp:Panel>
 </asp:Content>

@@ -15,4 +15,9 @@ public partial class app_content_create : System.Web.UI.Page
             Userbidname.Text = Session["username"].ToString();
         }
     }
+
+    protected void btnCreate_Click(object sender, EventArgs e)
+    {
+        
+    }
 }

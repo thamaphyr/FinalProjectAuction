@@ -16,7 +16,7 @@ public partial class Contact : System.Web.UI.UserControl
     protected void Button1_Click(object sender, EventArgs e)
     {
         MailMessage myMessage = new MailMessage();
-        myMessage.Subject = "Welcom to J.A.G Auction ";
+        myMessage.Subject = "Welcome to J.A.G Auction ";
         myMessage.Body = TextBox2.Text;
 
 
@@ -30,6 +30,9 @@ public partial class Contact : System.Web.UI.UserControl
         mySmtpClient.Send(myMessage);
 
         System.Diagnostics.Debug.WriteLine("Sending");
+        TextBox2.Text = "";
+        TextBox1.Text = "";
+        TextBox3.Text = "";
 
     }
 }

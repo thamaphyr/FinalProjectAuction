@@ -4,7 +4,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
     <uc1:nav runat="server" ID="nav" />
-    <section class="nav-respect">
+    <asp:Panel ID="Panel1" runat="server" class="nav-respect">
         <asp:Table ID="Table1" runat="server" Height="343px" Width="681px">
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server"></asp:TableCell>
@@ -29,10 +29,9 @@
                 <asp:TableCell runat="server"></asp:TableCell>
             </asp:TableRow>
         </asp:Table>
-    <section />
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [username], [user_id], [password], [lastname], [name] FROM [user]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [user]"></asp:SqlDataSource>
         <asp:GridView ID="GridView1" runat="server">
         </asp:GridView>
-
+    </asp:Panel>
 </asp:Content>
 

@@ -21,5 +21,7 @@
             <asp:BoundField DataField="username" HeaderText="username" SortExpression="username" />
         </Columns>
     </asp:GridView>
+    <asp:Button ID="Button1" runat="server" Text="Create Auction" OnClick="Button1_Click" />
 </asp:Content>
+
 

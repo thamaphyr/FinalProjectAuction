@@ -11,4 +11,9 @@ public partial class app_content_list : System.Web.UI.Page
     {
 
     }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/app/content/create.aspx");
+    }
 }

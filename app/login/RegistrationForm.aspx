@@ -82,10 +82,9 @@
                     </tr>
                 <tr>
                     <td class="auto-style2">
-                    <asp:Label ID="Label9" runat="server" Text="Zipcode‏‎‎‏‎ ‎‏‏‎‎‏ ‎‏‏‎‎‏‎ ‎‏‏‎‎‏‎ ‎‏‏‎‎‏‎‎‏‏‎‎‏‎ ‎‏‎‎‏‎‎‏‏‎ ‏‏‎‎‏‎ ‎‏‏‎‎‏ ‎‏‏‎‎‏‎ ‎‏‏‎‎‏‎ ‎‏‏‎‎‏‎‎‏‏‎‎‏‎ "></asp:Label>
-                    </td>
+                        &nbsp;</td>
                     <td class="auto-style1">
-                    <asp:TextBox CssClass="input" ID="TextBox3" placeholder="Zipcode" runat="server" Height="20px" Width="200px"></asp:TextBox></td>
+                        &nbsp;</td>
                     </tr>
                 <tr>
                     <td class="auto-style2">

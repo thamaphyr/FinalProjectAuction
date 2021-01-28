@@ -33,13 +33,12 @@ public partial class RegistrationForm : System.Web.UI.Page
             }
             else
             {
-                SqlDataSource1.InsertCommand = "insert into [user](username, password, name, lastname, zipcode) values ('" + txtEmail1.Text.ToString() + "','" + txtPassword1.Text.ToString() + "','" + TextBox1.Text.ToString() + "','" + TextBox2.Text.ToString() + "','" + TextBox3.Text.ToString() + "')";
+                SqlDataSource1.InsertCommand = "insert into [user](username, password, name, lastname) values ('" + txtEmail1.Text.ToString() + "','" + txtPassword1.Text.ToString() + "','" + TextBox1.Text.ToString() + "','" + TextBox2.Text.ToString() + "')";
                 SqlDataSource1.Insert();
                 txtEmail1.Text = "";
                 txtEmail2.Text = "";
                 TextBox1.Text = "";
                 TextBox2.Text = "";
-                TextBox3.Text = "";
                 Label1.Text = "User created";
                 timer1.Enabled = true;
             }

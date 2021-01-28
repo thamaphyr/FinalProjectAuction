@@ -1,15 +1,39 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
 
+<%@ Register Src="~/app/navigation/nav.ascx" TagPrefix="uc1" TagName="nav" %>
+
+
+
 
 <!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Auction</title>
+     <asp:ContentPlaceHolder id="head" runat="server">       
+        </asp:ContentPlaceHolder>
     <link href="../css/StyleSheet.css" rel="stylesheet"/>
 </head>
 <body>
     <form id="form1" runat="server" >
-        <asp:ContentPlaceHolder id="MainContent" runat="server"></asp:ContentPlaceHolder>
+    <div>
+        <header>  <a href="/"></a><br />
+        </header>
+         
+        
+        <section id="MainContent">
+            <nav>
+             <uc1:nav runat="server" ID="nav" />
+        </nav>
+        <asp:ContentPlaceHolder ID="cpMainContent" runat="server"></asp:ContentPlaceHolder>
+        </section>
+        <br />
+
+        <footer> <p>&copy 2021 <br /> <em>Johnattan Tibocha</em> <br/> <em>Azima Azimkhanova </em> <br />  <em>Grecia De La CruzMelo</em></p>
+             &nbsp; </footer>
+        
+    </div>       
+               
     </form>
 </body>
 </html>

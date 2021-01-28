@@ -1,4 +1,12 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="nav.ascx.cs" Inherits="app_navigation_nav" %>
-<div class="navigation">
-    this is the navigation Hello <asp:Label ID="lblName" runat="server" Text=""></asp:Label>
-</div>
+﻿
+  <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+       <Items>
+            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" ToolTip="Go Home" Value="Home"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/AboutUs.aspx" Text="About Us" ToolTip="Go About Us" Value="New Item"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/Sell.aspx" Text="Sell" Value="Sell"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/app/login/Default.aspx" Text="Register " Value="Register "></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/Contact.aspx" Text="Contact Us" Value="New Item"></asp:MenuItem>
+        </Items>
+  </asp:Menu>
+
+  

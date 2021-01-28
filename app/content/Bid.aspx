@@ -3,8 +3,8 @@
 <%@ Register Src="~/app/navigation/nav.ascx" TagPrefix="uc1" TagName="nav" %>
 
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
-     <uc1:nav runat="server" ID="nav" />
+<asp:Content ID="Content1" ContentPlaceHolderID="cpMainContent" Runat="Server">
+     
     <section class="nav-respect">
         <asp:Table ID="Table1" runat="server">
             <asp:TableRow runat="server">
@@ -33,10 +33,7 @@
                     <asp:Button ID="btnBid" OnClick="btnBid_Click" runat="server" Text="BID" />
                 </asp:TableCell><asp:TableCell runat="server">
                     <asp:Button ID="btnBack" OnClick="btnBack_Click" runat="server" Text="Back" />
-                </asp:TableCell></asp:TableRow></asp:Table></section>
-    
-    <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [auction]"></asp:SqlDataSource>
+                </asp:TableCell></asp:TableRow></asp:Table></section><asp:Label ID="lblMsg" runat="server" Text=""></asp:Label><asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [auction]"></asp:SqlDataSource>
      <asp:GridView ID="GridView1" runat="server" Visible="False">
          <Columns>
              <asp:BoundField />

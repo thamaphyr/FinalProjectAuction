@@ -1,11 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/layouts/MasterPage.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="content_Default" %>
 
-<%@ Register Src="~/app/navigation/nav.ascx" TagPrefix="uc1" TagName="nav" %>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
-    <uc1:nav runat="server" ID="nav" />
+<asp:Content ID="Content1" ContentPlaceHolderID="cpMainContent" Runat="Server">
+    
     <asp:Panel ID="Panel1" runat="server" class="nav-respect">
-        <asp:Table ID="Table1" runat="server" Height="343px" Width="681px">
+        <asp:Table ID="Table1" runat="server" Height="205px" Width="466px">
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server"></asp:TableCell>
                 <asp:TableCell runat="server" ColumnSpan="2">LOGIN</asp:TableCell>

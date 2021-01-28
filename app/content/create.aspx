@@ -1,10 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/layouts/MasterPage.master" AutoEventWireup="true" CodeFile="create.aspx.cs" Inherits="app_content_create" %>
-
 <%@ Register Src="~/app/navigation/nav.ascx" TagPrefix="uc1" TagName="nav" %>
 
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
-    <uc1:nav runat="server" ID="nav" />
+
+<asp:Content ID="Content1" ContentPlaceHolderID="cpMainContent" Runat="Server">
+    
     <section class="nav-respect">
         <br />
         <asp:Table ID="Table1" runat="server" Height="45px" Width="470px">

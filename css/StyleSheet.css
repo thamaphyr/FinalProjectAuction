@@ -1,17 +1,78 @@
-﻿body {
-    background-color:#00ffff;
+﻿.Introduction {
+    font-style: italic;
+    color: #000066;
+}
+header {
+    background-image: url('../Images/header.jpg');
+    width: 844px;
+    height: 80px;
+}
+
+body{
+    background-color:#F0FFFF;
+    width: 844px;
+}
+*
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    letter-spacing: 1.5px;
+   
 }
 
 
-.navigation {
-    position:absolute;
-    top:0;
-    left:0;
-    height: 50px;
-    width:100%;
-    background-color:#e58f8f;
+h1 {
+    font-size: 35px;
+    padding: 10px;
+    margin: 0px 0px 10px 0px;
 }
 
-.nav-respect{
-    margin-top:50px;
+nav{
+   width: 831px;
+   background-color: aquamarine;
+   text-align:center;
+   height: 27px;
+   margin-left: 0px;
+   padding:5px;
+
 }
+
+
+nav-respect{
+    align-content:center;
+    width:auto;
+}
+
+
+footer
+{
+ background-color: aquamarine ;
+ width: 844px;
+ text-align:center;
+ font-size: 12px;
+ padding-top:10px;
+ 
+
+}
+
+
+
+section#MainContent a
+{
+    color: green;
+    text-decoration: underline;
+}
+
+section#MainContent a:visited
+{
+     color: red;
+     text-decoration: underline;
+}
+
+section#MainContent a:hover
+{
+      color: orange;
+      text-decoration: underline;
+}
+

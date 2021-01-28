@@ -32,19 +32,17 @@
     </section>
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="auction_id" DataSourceID="SqlDataSource1" AllowSorting="True" OnRowDataBound="gridChangerequirement" >
         <Columns>
-            <asp:TemplateField HeaderText="Hyperlink">
-                <ItemTemplate>
-                    <asp:Button ID="Button2" runat="server" Text="Button" OnClick="Button2_Click" />
-                </ItemTemplate>
-            </asp:TemplateField>
             <asp:BoundField DataField="auction_id" HeaderText="auction_id" ReadOnly="True" SortExpression="auction_id" InsertVisible="False" />
             <asp:BoundField DataField="item" HeaderText="item" SortExpression="item" />
             <asp:BoundField DataField="init_price" HeaderText="init_price" SortExpression="init_price" />
             <asp:BoundField DataField="bid_price" HeaderText="bid_price" SortExpression="bid_price" />
             <asp:BoundField DataField="bidusername" HeaderText="bidusername" SortExpression="bidusername" />
             <asp:BoundField DataField="username" HeaderText="username" SortExpression="username" />
+            <asp:BoundField HeaderText="Bid" />
+            <asp:BoundField HeaderText="Delete" />
         </Columns>
     </asp:GridView>
+    <br />
     <asp:Button ID="Button1" runat="server" Text="Create Auction" OnClick="Button1_Click" />
 </asp:Content>
 

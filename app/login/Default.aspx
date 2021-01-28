@@ -18,7 +18,7 @@
             </asp:TableRow>
             <asp:TableRow runat="server">
                 <asp:TableCell runat="server">Password</asp:TableCell>
-                <asp:TableCell runat="server"><asp:TextBox ID="password" runat="server"></asp:TextBox></asp:TableCell>
+                <asp:TableCell runat="server"><asp:TextBox ID="password" TextMode="Password" runat="server"></asp:TextBox></asp:TableCell>
                 <asp:TableCell runat="server"></asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">

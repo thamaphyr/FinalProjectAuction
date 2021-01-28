@@ -17,7 +17,7 @@ public partial class Contact : System.Web.UI.UserControl
     {
         MailMessage myMessage = new MailMessage();
         myMessage.Subject = "Welcome to J.A.G Auction ";
-        myMessage.Body = TextBox2.Text;
+        myMessage.Body = "Hi. Thanks for contact to Staff F&A&G Auction, we will response your questions during this week. \nRegards\n\n Message Attached:\n" + TextBox2.Text;
 
 
         MailAddress senderAddress = new MailAddress("greciadelacruzmelo1@asa.edu");

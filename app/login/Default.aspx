@@ -32,7 +32,7 @@
 
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT user_id, password, username FROM [user]">
         </asp:SqlDataSource>
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="Label1" runat="server" Text="Label" CssClass="MessageError"></asp:Label>
         <asp:GridView ID="GridView1" runat="server" Visible="False">
             <Columns>
                 <asp:BoundField />

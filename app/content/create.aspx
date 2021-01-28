@@ -27,13 +27,6 @@
                 <asp:TableCell runat="server"></asp:TableCell>
             </asp:TableRow>
             <asp:TableRow runat="server">
-                <asp:TableCell runat="server">Bid Price</asp:TableCell>
-                <asp:TableCell runat="server">
-                    <asp:TextBox ID="BidPrice" runat="server"></asp:TextBox>
-                </asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow runat="server">
                 <asp:TableCell runat="server">Username</asp:TableCell>
                 <asp:TableCell runat="server">
                     <asp:TextBox ID="Username" runat="server" value="" Enabled="False"></asp:TextBox>
@@ -52,9 +45,12 @@
                 <asp:TableCell runat="server">
                     <asp:Button ID="btnCreate" runat="server" Text="Button" OnClick="btnCreate_Click" />
                 </asp:TableCell>
-                <asp:TableCell runat="server"></asp:TableCell>
+                <asp:TableCell runat="server">
+                    <asp:Button ID="btnBack" runat="server" Text="Back" OnClick="btnBack_Click" />
+                </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
+        <asp:Label ID="lblMsg" runat="server" Text="" CssClass="MessageError"></asp:Label>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [auction] WHERE [auction_id] = @auction_id" InsertCommand="INSERT INTO [auction] ([item], [init_price], [bid_price], [user_id], [username], [bidusername]) VALUES (@item, @init_price, @bid_price, @user_id, @username, @bidusername)" SelectCommand="SELECT * FROM [auction]" UpdateCommand="UPDATE [auction] SET [item] = @item, [init_price] = @init_price, [bid_price] = @bid_price, [user_id] = @user_id, [username] = @username, [bidusername] = @bidusername WHERE [auction_id] = @auction_id">
             <DeleteParameters>
                 <asp:Parameter Name="auction_id" Type="Int32" />

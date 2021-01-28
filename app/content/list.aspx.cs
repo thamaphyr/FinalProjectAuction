@@ -16,4 +16,5 @@ public partial class app_content_list : System.Web.UI.Page
     {
         Response.Redirect("~/app/content/create.aspx");
     }
+    
 }

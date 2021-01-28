@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
     <uc1:nav runat="server" ID="nav" />
     <div class="nav-respect">
-        HELLO WORLD
+        WELCOME TO THE AUCTION
     </div>
 </asp:Content>
 

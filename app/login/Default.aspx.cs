@@ -30,10 +30,10 @@ public partial class content_Default : System.Web.UI.Page
             Label1.Text = "Incorrect email/password";
         } else
         {
-            System.Diagnostics.Debug.WriteLine("row 1 "+GridView1.Rows[0].Cells[4].Text.ToString());
-            System.Diagnostics.Debug.WriteLine("row 2 " + GridView1.Rows[0].Cells[5].Text.ToString());
-            System.Diagnostics.Debug.WriteLine("row 3 " + GridView1.Rows[0].Cells[6].Text.ToString());
-            System.Diagnostics.Debug.WriteLine("row 4 " + GridView1.Rows[0].Cells[7].Text.ToString());
+            //System.Diagnostics.Debug.WriteLine("row 1 "+GridView1.Rows[0].Cells[4].Text.ToString());
+            //System.Diagnostics.Debug.WriteLine("row 2 " + GridView1.Rows[0].Cells[5].Text.ToString());
+            //System.Diagnostics.Debug.WriteLine("row 3 " + GridView1.Rows[0].Cells[6].Text.ToString());
+            //System.Diagnostics.Debug.WriteLine("row 4 " + GridView1.Rows[0].Cells[7].Text.ToString());
             Session["user_id"] = GridView1.Rows[0].Cells[4].Text.ToString();
             Session["username"] = GridView1.Rows[0].Cells[5].Text.ToString();
             Session["name"] = GridView1.Rows[0].Cells[7].Text.ToString();

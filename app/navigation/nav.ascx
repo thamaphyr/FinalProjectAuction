@@ -1,7 +1,7 @@
 ﻿
   <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
        <Items>
-            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" ToolTip="Go Home" Value="Home"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/" Text="Home" ToolTip="Go Home" Value="Home"></asp:MenuItem>
             <asp:MenuItem NavigateUrl="~/AboutUs.aspx" Text="About Us" ToolTip="Go About Us" Value="New Item"></asp:MenuItem>
             <asp:MenuItem NavigateUrl="~/app/content/list.aspx" Text="Bid" Value="Sell"></asp:MenuItem>
             <asp:MenuItem NavigateUrl="~/app/login/Default.aspx" Text="Login" Value="Login">
